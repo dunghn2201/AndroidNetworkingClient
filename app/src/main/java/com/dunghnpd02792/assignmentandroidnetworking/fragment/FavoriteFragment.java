@@ -1,6 +1,8 @@
 
 package com.dunghnpd02792.assignmentandroidnetworking.fragment;
 
+import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -8,8 +10,12 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.Window;
+import android.view.WindowManager;
+import android.widget.LinearLayout;
 
 import com.dunghnpd02792.assignmentandroidnetworking.R;
+import com.dunghnpd02792.assignmentandroidnetworking.ui.UserManagementActivity;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -30,6 +36,9 @@ public class FavoriteFragment extends Fragment {
     public FavoriteFragment() {
         // Required empty public constructor
     }
+
+    private LinearLayout lnOptionManagementUser;
+    private View rootView;
 
     /**
      * Use this factory method to create a new instance of
@@ -58,10 +67,28 @@ public class FavoriteFragment extends Fragment {
         }
     }
 
+
     @Override
+
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+        rootView = inflater.inflate(R.layout.fragment_favorite, container, false);
+        initView(rootView);
+
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_favorite, container, false);
+        return rootView;
     }
+
+    private void initView(View rootView) {
+
+    }
+
+//    @Override
+//    public void onClick(View v) {
+//        switch (v.getId()) {
+//            case R.id.:
+//
+//                break;
+//        }
+//    }
 }

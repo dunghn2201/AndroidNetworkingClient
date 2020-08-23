@@ -1,9 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#6200EE</color>
-    <color name="colorPrimaryDark">#3700B3</color>
+    <color name="colorPrimary">#FFAD4A</color>
+    <color name="colorPrimaryDark">#FFAD4A</color>
     <color name="colorAccent">#03DAC5</color>
     <color name="colorWhite">#FFFFFF</color>
+    <color name="colorBlack">#000000</color>
+    <color name="colorGrey">#808080</color>
+    <color name="colorXanh">#00ccff</color>
+
+    <color name="backgroundstart">#FB9214</color>
+    <color name="backgroundend">#FFAD4A</color>
     <dimen name="default_margin">16dp</dimen>
     <dimen name="drawable_padding">24dp</dimen>
     <dimen name="text_size">16sp</dimen>

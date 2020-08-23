@@ -5,49 +5,126 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".UploadFile.AddProductActivity">
+    tools:context=".ui.AddProductActivity">
 
-    <EditText
-        android:id="@+id/edproduct_title"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="Name" />
+        android:layout_marginTop="30dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="5dp">
 
-    <EditText
-        android:id="@+id/edproduct_address"
+        <ImageView
+            android:id="@+id/imgBackAddPoroduct"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_margin="10dp"
+            android:src="@drawable/arrow_back" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:fontFamily="@font/poppins_medium"
+            android:text="Insert Product"
+            android:textColor="@color/backgroundstart"
+            android:textSize="25sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvStatusUploadImageProduct"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="Name" />
-
-    <EditText
-        android:id="@+id/edproduct_phone"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="Name" />
-
-    <EditText
-        android:id="@+id/edproduct_content"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="Name" />
+        android:fontFamily="@font/poppins_medium"
+        android:text="Attach Image"
+        android:textAlignment="center"
+        android:textColor="@color/colorBlack" />
 
     <ImageView
-        android:id="@+id/imgProduct"
+        android:id="@+id/imgFood"
         android:layout_width="80dp"
         android:layout_height="80dp"
-        app:srcCompat="@drawable/ic_launcher_background" />
+        android:layout_gravity="center_horizontal"
+        app:srcCompat="@drawable/ic_baseline_image_24" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Name Food"
+        app:endIconMode="clear_text"
+        app:startIconDrawable="@drawable/ic_baseline_fastfood_24">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edname_food"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:fontFamily="@font/poppins_medium"
+            android:inputType="text"
+            android:text="Cơm chiên dương châu" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Address"
+        app:endIconMode="clear_text"
+        app:startIconDrawable="@drawable/ic_baseline_edit_location_24">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edaddress_food"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:fontFamily="@font/poppins_medium"
+            android:inputType="text"
+            android:text="08 Hà Văn Tính" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Price"
+        app:endIconMode="clear_text"
+        app:startIconDrawable="@drawable/ic_baseline_monetization_on_24">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edprice_food"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:fontFamily="@font/poppins_medium"
+            android:inputType="number"
+            android:text="3560000" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Description"
+        app:endIconMode="clear_text"
+        app:startIconDrawable="@drawable/ic_baseline_description_24">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/eddescription_food"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:fontFamily="@font/poppins_medium"
+            android:inputType="text"
+            android:text="Đặc biệt" />
+    </com.google.android.material.textfield.TextInputLayout>
+
 
     <Button
         android:id="@+id/btnAddProduct"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Add Product" />
+        android:background="@drawable/gradientbg"
+        android:text="Add Product"
+        android:textColor="@color/colorWhite" />
+
+
 </LinearLayout>

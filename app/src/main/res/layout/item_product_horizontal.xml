@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/itemProductH"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="7dp"
+    app:cardElevation="2dp"
+    app:cardUseCompatPadding="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/imgItemProductH"
+            android:layout_width="300dp"
+            android:layout_height="150dp"
+            android:src="@mipmap/ic_launcher" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+            <TextView
+                android:id="@+id/tvItemNameProductH"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_medium"
+                android:text="TextView"
+                android:textColor="@color/colorBlack"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvItemDesProductH"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_medium"
+                android:text="TextView" />
+
+            <com.willy.ratingbar.ScaleRatingBar
+                android:id="@+id/rBItemRateNumProductH"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:srb_drawableEmpty="@drawable/ic_rating_unfill"
+                app:srb_drawableFilled="@drawable/ic_rating_filled"
+                app:srb_numStars="5"
+                app:srb_starHeight="15dp"
+                app:srb_starPadding="5dp"
+                app:srb_starWidth="15dp" />
+
+            <!--            <TextView-->
+            <!--                android:id="@+id/tvItemRateNumProductH"-->
+            <!--                android:layout_width="wrap_content"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:fontFamily="@font/poppins_medium"-->
+            <!--                android:text="TextView"-->
+            <!--                android:textColor="@color/colorBlack" />-->
+        </LinearLayout>
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

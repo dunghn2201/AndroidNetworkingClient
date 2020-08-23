@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:padding="10dp">
+
+    <!--    <TextView-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:fontFamily="@font/poppins_medium"-->
+    <!--        android:text="Cart"-->
+    <!--        android:textAlignment="textStart"-->
+    <!--        android:textColor="@color/colorBlack"-->
+    <!--        android:textSize="32sp"-->
+    <!--        android:textStyle="bold" />-->
+
+
+    <!--    <androidx.recyclerview.widget.RecyclerView-->
+    <!--        android:id="@+id/rvCartProduct"-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="match_parent" />-->
+
+    <!--    <androidx.constraintlayout.widget.ConstraintLayout-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="match_parent"-->
+    <!--        android:orientation="horizontal">-->
+
+    <!--        <TextView-->
+    <!--            android:layout_width="wrap_content"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:fontFamily="@font/poppins_medium"-->
+    <!--            android:text="Total"-->
+    <!--            android:textColor="@color/colorBlack"-->
+    <!--            android:textSize="25sp"-->
+    <!--            android:textStyle="bold"-->
+    <!--            app:layout_constraintBottom_toBottomOf="parent"-->
+    <!--            app:layout_constraintStart_toStartOf="parent"-->
+    <!--            app:layout_constraintTop_toTopOf="parent" />-->
+
+
+    <!--        <TextView-->
+    <!--            android:layout_width="wrap_content"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:layout_marginEnd="2dp"-->
+    <!--            android:layout_marginBottom="30dp"-->
+    <!--            android:fontFamily="@font/poppins_medium"-->
+    <!--            android:text="VND"-->
+    <!--            android:textSize="15sp"-->
+    <!--            app:layout_constraintBottom_toBottomOf="parent"-->
+    <!--            app:layout_constraintEnd_toStartOf="@+id/tvTotalPriceProductCart" />-->
+
+    <!--        <TextView-->
+    <!--            android:id="@+id/tvTotalPriceProductCart"-->
+    <!--            android:layout_width="wrap_content"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:fontFamily="@font/poppins_medium"-->
+    <!--            android:text="25,000,000"-->
+    <!--            android:textColor="@color/colorBlack"-->
+    <!--            android:textSize="25sp"-->
+    <!--            android:textStyle="bold"-->
+    <!--            app:layout_constraintBottom_toBottomOf="parent"-->
+    <!--            app:layout_constraintEnd_toEndOf="parent"-->
+    <!--            app:layout_constraintTop_toTopOf="parent" />-->
+
+
+    <!--    </androidx.constraintlayout.widget.ConstraintLayout>-->
+
+    <!--    <Button-->
+    <!--        android:id="@+id/btnMakeOderCartProduct"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:layout_marginVertical="10dp"-->
+    <!--        android:background="@drawable/gradientbg"-->
+    <!--        android:fontFamily="@font/poppins_medium"-->
+    <!--        android:paddingHorizontal="150dp"-->
+    <!--        android:text="Make order"-->
+    <!--        android:textColor="@color/colorWhite" />-->
+</LinearLayout>

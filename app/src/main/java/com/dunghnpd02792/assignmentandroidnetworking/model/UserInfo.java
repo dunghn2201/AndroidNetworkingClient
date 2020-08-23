@@ -18,9 +18,18 @@ public class UserInfo {
     @SerializedName("email")
     @Expose
     private String email;
-    @SerializedName("hash")
+    @SerializedName("hashed_password")
     @Expose
-    private String hash;
+    private String hashedPassword;
+    @SerializedName("numberPhone")
+    @Expose
+    private String numberPhone;
+    @SerializedName("dateOfbirth")
+    @Expose
+    private String dateOfbirth;
+    @SerializedName("bio")
+    @Expose
+    private String bio;
     @SerializedName("address")
     @Expose
     private String address;
@@ -37,20 +46,17 @@ public class UserInfo {
     @Expose
     private List<UserData> userData = null;
 
-    public UserInfo(String id, String fullName, String email, String hash, String address, String avatar, Boolean permission, List<UserData> userData) {
+    public UserInfo() {
+    }
+
+    public UserInfo(String id, String fullName, String email, String hashedPassword, String numberPhone, String dateOfbirth, String bio, String address, String avatar) {
         this.id = id;
         this.fullName = fullName;
         this.email = email;
-        this.hash = hash;
-        this.address = address;
-        this.avatar = avatar;
-        this.permission = permission;
-        this.userData = userData;
-    }
-
-    public UserInfo(String fullName, String email, String address, String avatar) {
-        this.fullName = fullName;
-        this.email = email;
+        this.hashedPassword = hashedPassword;
+        this.numberPhone = numberPhone;
+        this.dateOfbirth = dateOfbirth;
+        this.bio = bio;
         this.address = address;
         this.avatar = avatar;
     }
@@ -79,12 +85,36 @@ public class UserInfo {
         this.email = email;
     }
 
-    public String getHash() {
-        return hash;
+    public String getHashedPassword() {
+        return hashedPassword;
     }
 
-    public void setHash(String hash) {
-        this.hash = hash;
+    public void setHashedPassword(String hashedPassword) {
+        this.hashedPassword = hashedPassword;
+    }
+
+    public String getNumberPhone() {
+        return numberPhone;
+    }
+
+    public void setNumberPhone(String numberPhone) {
+        this.numberPhone = numberPhone;
+    }
+
+    public String getDateOfbirth() {
+        return dateOfbirth;
+    }
+
+    public void setDateOfbirth(String dateOfbirth) {
+        this.dateOfbirth = dateOfbirth;
+    }
+
+    public String getBio() {
+        return bio;
+    }
+
+    public void setBio(String bio) {
+        this.bio = bio;
     }
 
     public String getAddress() {

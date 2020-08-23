@@ -6,9 +6,14 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 
 
+import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.MenuItem;
+import android.view.View;
+import android.view.Window;
+import android.view.WindowManager;
 import android.widget.Toast;
 
 import com.dunghnpd02792.assignmentandroidnetworking.R;
@@ -25,6 +30,13 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        // In Activity's onCreate() for instance
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
+            Window w = getWindow();
+            getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR);
+
+            w.setFlags(WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS, WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS);
+        }
         setContentView(R.layout.activity_main);
         bottomNavigation = findViewById(R.id.bottom_navigation);
         bottomNavigation.setOnNavigationItemSelectedListener(navigationItemSelectedListener);
@@ -45,22 +57,19 @@ public class MainActivity extends AppCompatActivity {
                 public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                     switch (item.getItemId()) {
                         case R.id.navigation_home:
-                            openFragment(HomeFragment.newInstance("", ""));
-                            Toast.makeText(MainActivity.this, "Home", Toast.LENGTH_SHORT).
-                                    show();
+                            openFragment(HomeFragment.newInstance("", "homeFragment"));
+
                             return true;
                         case R.id.navigation_order:
-                            openFragment(OrderFragment.newInstance("", ""));
-                            Toast.makeText(MainActivity.this, "order", Toast.LENGTH_SHORT).
-                                    show();
+                            openFragment(OrderFragment.newInstance("", "orderFragment"));
+
                             return true;
                         case R.id.navigation_favorite:
-                            openFragment(FavoriteFragment.newInstance("", ""));
-                            Toast.makeText(MainActivity.this, "favorite", Toast.LENGTH_SHORT).
-                                    show();
+                            openFragment(FavoriteFragment.newInstance("", "favoriteFragment"));
+
                             return true;
                         case R.id.navigation_profile:
-                            openFragment(ProfileFragment.newInstance("", ""));
+                            openFragment(ProfileFragment.newInstance("", "profileFragment"));
 
 
                             return true;
@@ -69,4 +78,12 @@ public class MainActivity extends AppCompatActivity {
                 }
             };
 
+    // In your activity
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        for (Fragment fragment : getSupportFragmentManager().getFragments()) {
+            fragment.onActivityResult(requestCode, resultCode, data);
+        }
+    }
 }
